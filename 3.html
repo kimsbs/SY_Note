@@ -9,6 +9,8 @@
 <body>
 
   <h1><a href="index.html">WEB</a></h1>
+
+
   <div id="grid">
   <ol>
     <li><a href="1.html">HTML</a></li>
@@ -22,6 +24,40 @@
     [7] JavaScript enables interactive web pages and thus is an essential part of web applications. The vast majority of websites use it, [8] and all
     major web browsers have a dedicated JavaScript engine to execute it.
   </p>
+
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    if(this.value === 'night'){
+        this.value = 'day';
+        target.style.backgroundColor='black';
+        target.style.color='green';
+
+        i=0;
+        while(i<alist.length){
+          alist[i].style.color='green';
+          console.log(alist[i]);
+          i = i+1;
+        }
+
+    }
+    else{
+      this.value = 'night';
+      target.style.backgroundColor='white';
+      target.style.color='black';
+
+      i=0;
+      while(i<alist.length){
+        if(i!=3){
+          alist[i].style.color='black';
+        }else{
+          alist[i].style.color='red';
+        }console.log(alist[i]);
+          i = i+1;
+      }
+    }
+    ">
 </div>
 </div>
 </body>
